@@ -45,7 +45,7 @@ function Layout() {
 
 function App() {
   return (
-    <BrowserRouter>
+    <BrowserRouter basename="/Kuchipudi-Dance-Academy/">
       <Layout />
     </BrowserRouter>
   );
