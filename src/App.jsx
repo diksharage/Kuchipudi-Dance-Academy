@@ -5,6 +5,7 @@ import {
   useLocation,
 } from "react-router-dom";
 
+import ProtectedRoute from "./components/ProtectedRoute";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 
@@ -27,15 +28,62 @@ function Layout() {
 
       <main className="flex-grow">
         <Routes>
-          <Route path="/" element={<Login />} />
+  <Route path="/" element={<Login />} />
 
-          <Route path="/home" element={<Home />} />
-          <Route path="/about" element={<About />} />
-          <Route path="/programs" element={<Programs />} />
-          <Route path="/studenthub" element={<StudentHub />} />
-          <Route path="/gallery" element={<Gallery />} />
-          <Route path="/contact" element={<Contact />} />
-        </Routes>
+  <Route
+    path="/home"
+    element={
+      <ProtectedRoute>
+        <Home />
+      </ProtectedRoute>
+    }
+  />
+
+  <Route
+    path="/about"
+    element={
+      <ProtectedRoute>
+        <About />
+      </ProtectedRoute>
+    }
+  />
+
+  <Route
+    path="/programs"
+    element={
+      <ProtectedRoute>
+        <Programs />
+      </ProtectedRoute>
+    }
+  />
+
+  <Route
+    path="/studenthub"
+    element={
+      <ProtectedRoute>
+        <StudentHub />
+      </ProtectedRoute>
+    }
+  />
+
+  <Route
+    path="/gallery"
+    element={
+      <ProtectedRoute>
+        <Gallery />
+      </ProtectedRoute>
+    }
+  />
+
+  <Route
+    path="/contact"
+    element={
+      <ProtectedRoute>
+        <Contact />
+      </ProtectedRoute>
+    }
+  />
+</Routes>
       </main>
 
       {!hideLayout && <Footer />}
@@ -45,7 +93,7 @@ function Layout() {
 
 function App() {
   return (
-    <BrowserRouter basename="/Kuchipudi-Dance-Academy/">
+    <BrowserRouter basename="/Kuchipudi-Dance-Academy">
       <Layout />
     </BrowserRouter>
   );

@@ -5,6 +5,8 @@ import gallery3 from "../assets/gallery3.jpg";
 import gallery4 from "../assets/gallery4.jpg";
 import gallery5 from "../assets/gallery5.jpg";
 
+
+
 function Gallery() {
   return (
     <>
@@ -18,37 +20,38 @@ function Gallery() {
 
         <div className="grid md:grid-cols-3 gap-6 p-10">
 
-          <img
-            src={gallery1}
-            alt=""
-            className="rounded-xl shadow-lg hover:scale-105 transition duration-300"
-          />
+  <img
+    src={gallery1}
+    alt=""
+    className="w-full h-72 object-cover rounded-xl shadow-lg hover:scale-105 transition duration-300"
+  />
 
-          <img
-            src={gallery2}
-            alt=""
-            className="rounded-xl shadow-lg hover:scale-105 transition duration-300"
-          />
+  <img
+    src={gallery2}
+    alt=""
+    className="w-full h-72 object-cover rounded-xl shadow-lg hover:scale-105 transition duration-300"
+  />
 
-          <img
-            src={gallery3}
-            alt=""
-            className="rounded-xl shadow-lg hover:scale-105 transition duration-300"
-          />
+  <img
+    src={gallery3}
+    alt=""
+    className="w-full h-72 object-cover rounded-xl shadow-lg hover:scale-105 transition duration-300"
+  />
 
-          <img
-            src={gallery4}
-            alt=""
-            className="rounded-xl shadow-lg hover:scale-105 transition duration-300"
-          />
+  <img
+    src={gallery4}
+    alt=""
+    className="w-full h-72 object-cover rounded-xl shadow-lg hover:scale-105 transition duration-300"
+  />
 
-          <img
-            src={gallery5}
-            alt=""
-            className="rounded-xl shadow-lg hover:scale-105 transition duration-300"
-          />
+  <img
+    src={gallery5}
+    alt=""
+    className="w-full h-72 object-cover rounded-xl shadow-lg hover:scale-105 transition duration-300"
+  />
 
-        </div>
+
+</div>
 
       </div>
 
